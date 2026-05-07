@@ -15,10 +15,10 @@ class VectorStoreService(object):
             search_kwargs={"k": config.similarity_threshold}
         )
 
-if __name__ == "__main__":
-    from langchain_community.embeddings import DashScopeEmbeddings
-    embedding = DashScopeEmbeddings(model="text-embedding-v4")
-    retriever = VectorStoreService(embedding).get_retriever()
-
-    res = retriever.invoke("体重100，推荐尺码")
-    print(res)
+# if __name__ == "__main__":
+#     from langchain_community.embeddings import DashScopeEmbeddings
+#     embedding = DashScopeEmbeddings(model="text-embedding-v4")
+#     retriever = VectorStoreService(embedding).get_retriever()
+#
+#     res = retriever.invoke("体重100，推荐尺码")
+#     print(res)
